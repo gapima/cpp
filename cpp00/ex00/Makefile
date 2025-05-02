@@ -9,5 +9,5 @@ all:
 
 clean:
 	rm -rf $(NAME)
-
-fclean: clean all
+	
+re: clean all
