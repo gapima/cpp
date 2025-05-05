@@ -2,6 +2,8 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
+#include <string>
+#include <stdlib.h>
 
 PhoneBook::PhoneBook() {
     contactCount = 0;
@@ -51,6 +53,8 @@ void PhoneBook::searchContacts() const {
     }
     std::cout << "Enter contact index to view details: ";
     int index;
+
+    
     std::cin >> index;
 
     if (std::cin.fail() || index < 0 || index >= total) {
@@ -65,4 +69,5 @@ void PhoneBook::searchContacts() const {
     std::cout << "Nickname: "     << contacts[index].getField("nickname") << std::endl;
     std::cout << "Phone Number: "     << contacts[index].getField("phone_number") << std::endl;
     std::cout << "Darkest Secret: "     << contacts[index].getField("darkest_secret") << std::endl;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
