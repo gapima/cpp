@@ -2,16 +2,18 @@
 #define ACCOUNT_HPP
 
 #include <iostream>
+#include <iomanip>
 #include <ctime>
 
 class Account {
     public:
+        typedef Account t;
+        
         Account(int initial_deposit);
         ~Account();
 
         void makeDeposit(int deposit);
         bool makeWithdrawal(int withdrawal);
-        int checkAmount() const;
         void displayStatus() const;
 
         static void displayAccountsInfos();

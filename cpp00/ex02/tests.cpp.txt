@@ -1,0 +1,21 @@
+#include "Account.hpp"
+
+int main() {
+    Account acc1(100);
+    Account acc2(200);
+    Account acc3(50);
+
+    Account::displayAccountsInfos();
+
+    acc1.makeDeposit(50);
+    acc2.makeWithdrawal(30);
+    acc3.makeWithdrawal(100);
+
+    acc1.displayStatus();
+    acc2.displayStatus();
+    acc3.displayStatus();
+
+    Account::displayAccountsInfos();
+
+    return 0;
+}
